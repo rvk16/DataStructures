@@ -22,7 +22,7 @@ public class WaveArray {
     private static int[] waveArrayNotLexographic(int[] arr){
         int n = arr.length;
 
-        for(int i=1; i<n; i++){
+        for(int i=1; i<n; i+=2){
             if(arr[i]>arr[i-1]){
                 swap(arr, i, i-1);
             }
