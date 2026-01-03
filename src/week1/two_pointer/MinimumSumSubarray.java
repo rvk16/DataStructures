@@ -21,7 +21,7 @@ public class MinimumSumSubarray {
             high++;
 
             while(currentSum >= target){
-                int currentWindowLen = high - low;
+                int currentWindowLen = high - low; // the reason behind high - low and Not high - low + 1 is high is incremented already above.
                 minLenWindow = Math.min(currentWindowLen, minLenWindow);
                 currentSum -= nums[low];
                 low++;
