@@ -15,9 +15,19 @@ public class ReverseLinkedList {
 
         printLinkedList(head);
 
-        Node newHead = reverseLinkedList(head);
+        Node newHead = reverseLLRecursively(head);
 
         printLinkedList(newHead);
+    }
+
+    private static Node reverseLLRecursively(Node head) {
+        if (head == null || head.next == null) return head;
+
+        Node headOfSubProblem = reverseLLRecursively(head.next);
+
+        head.next.next = head;
+        head.next = null;
+        return headOfSubProblem;
     }
 
     private static Node reverseLinkedList(Node head) {
