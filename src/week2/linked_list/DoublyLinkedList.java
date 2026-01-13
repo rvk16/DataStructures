@@ -4,16 +4,16 @@ public class DoublyLinkedList {
     public static void main(String[] args) {
 
     }
-}
 
-class DoublyNode<T> {
-    T data;
-    Node<T> next;
-    Node<T> prev;
+    static class Node<T> {
+        T data;
+        Node<T> next;
+        Node<T> prev;
 
-    DoublyNode(T data){
-        this.data = data;
-        this.next = null;
-        this.prev = null;
+        Node(T data) {
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
     }
 }

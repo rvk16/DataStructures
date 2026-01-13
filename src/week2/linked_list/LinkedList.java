@@ -1,6 +1,16 @@
 package week2.linked_list;
 
 public class LinkedList {
+    static class Node<T> {
+        T data;
+        Node<T> next;
+
+        Node(T data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     public static void main(String[] args) {
 
         Node<Integer> head = new Node<>(5);
@@ -68,12 +78,3 @@ public class LinkedList {
     }
 }
 
-class Node<T> {
-    T data;
-    Node<T> next;
-
-    Node(T data) {
-        this.data = data;
-        this.next = null;
-    }
-}
